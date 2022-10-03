@@ -5,10 +5,10 @@ import time
 
 
 # Connecting to your Twitter Developer APIs
-api_key= '' #your api_key
-api_secret= '' #your api_secret
-access_token= ''#your acces token
-access_token_secret= "" #your acces_token_secret
+api_key= '' #put your api_key
+api_secret= '' #put your api_secret
+access_token= ''#put your acces token
+access_token_secret= "" #put your acces_token_secret
 
 
 bearer_token = ''
@@ -43,7 +43,7 @@ friendtoadd = getUserFollowers('account') #put the name of the account you want
 for i in range(len(friendtoadd)) :
     try:
         screen_name = api.get_user(user_id=friendtoadd[i]).screen_name
-        followUser(screen_name)
+        followUser(screen_name)  #be careful you cant add more than 400 people a day
         print(screen_name + " a été ajouter")
         time.sleep(5)
     except:
